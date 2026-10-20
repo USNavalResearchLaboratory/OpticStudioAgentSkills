@@ -1,0 +1,83 @@
+{
+  "name": "mosaic_tir_collimator_locked",
+  "description": "Two-element TIR collimator (central EvenAsphereLens + outer AnnularAsphericLens collar), pitch-respecting locked design.",
+  "provenance": {
+    "source_zos": "runs/tir_lens/phase3_routeb_ready.zos",
+    "locked": true,
+    "ray_sampling": "16X (GUI DLS)",
+    "note": "16X GUI DLS result. A 64X re-optimize (phase3_routeb64_ready.zos) did NOT improve on this: it overfit and blew the 50um collar-height bound (thk->105um) for a worse true far-field (0.128). frac12 here is the pitch/etendue ceiling."
+  },
+  "units": {
+    "geometry": "mm (Zemax NCE native; write back cell-for-cell)",
+    "asphere_coefficients": "mm^-(2n-1) native; do NOT rescale",
+    "angle": "deg",
+    "key_dimensions_um": "um (human summary only)"
+  },
+  "wavelength_nm": 460.0,
+  "system_type": "NonSequential",
+  "object_types": {
+    "lens": "EvenAsphereLens",
+    "collar": "AnnularAsphericLens",
+    "source": "SourceRectangle",
+    "detector": "DetectorPolar"
+  },
+  "material": {
+    "index_model_glass": "N-BK7",
+    "catalog": "SCHOTT",
+    "n_at_wavelength": 1.524,
+    "requested_index": 1.52,
+    "fab_material": "OrmoComp / IP-S (2PP)",
+    "blue_durability": "best",
+    "note": "Catalog glass is an INDEX STAND-IN for ray tracing; the fabricable micro-optic is the named 2PP/UV resin, not the bulk glass."
+  },
+  "source": {
+    "shape": "rectangle",
+    "emitter_size_um": 10.0,
+    "cosine_exponent": 1.0,
+    "profile": "Lambertian (m=1)"
+  },
+  "central_lens_EvenAsphereLens_mm": {
+    "Z": 0.00503812440117069,
+    "Thickness": 0.02,
+    "Radius1": 0.0,
+    "Conic1": 0.0,
+    "Radius2": -0.020457278885629,
+    "Conic2": 0.0393566743292626,
+    "Coeff2OnRPower2": -12.6153589378553,
+    "Coeff2OnRPower4": -8616.24594221036,
+    "Clear1": 0.01,
+    "Clear2": 0.01,
+    "Edge1": 0.01,
+    "Edge2": 0.01
+  },
+  "outer_collar_AnnularAsphericLens_mm": {
+    "Z": 0.0,
+    "Thickness": 0.0446087985782912,
+    "MinFrontAperture": 0.01,
+    "MaxFrontAperture": 0.0103478785367478,
+    "MinBackAperture": 0.01,
+    "MaxBackAperture": 0.024,
+    "ThkAperture": 0.024,
+    "FrontRadius": 0.0,
+    "RearRadius": 0.0,
+    "RearRPower2": -9.50737898085895,
+    "RearRPower4": -6321.02209802005,
+    "Edge1": 0.0103478785367478,
+    "Edge2": 0.024
+  },
+  "key_dimensions_um": {
+    "lens_Z": 5.0381,
+    "lens_thickness": 20.0,
+    "lens_Radius2": -20.4573,
+    "collar_thickness": 44.6088,
+    "collar_MaxBackAperture": 24.0,
+    "collar_outer_diameter": 48.0
+  },
+  "manufacturability": {
+    "collar_outer_wall_draft_deg": 17.0,
+    "draft_class": "moldable",
+    "pitch_um": 50.0,
+    "outer_aperture_diameter_um": 48.0,
+    "respects_pitch": true
+  }
+}

@@ -1,0 +1,22 @@
+cff-version: 1.2.0
+title: OpticStudioAgentSkills
+message: >-
+  If you use this software, please cite it using the
+  metadata from this file.
+type: software
+authors:
+  - family-names: "Davidson"
+    given-names: "Zoey S."
+    affiliation: "U.S. Naval Research Laboratory"
+    orcid: "https://orcid.org/0000-0002-1528-2085"
+repository-code: >-
+  https://github.com/USNavalResearchLaboratory/OpticStudioAgentSkills
+keywords:
+  - "Zemax OpticStudio"
+  - "ZOS-API"
+  - "Optical Simulation"
+  - "Optical Engineering"
+  - "Coding Agents"
+license: MIT
+version: 1.0.0
+date-released: 2026-10-20
