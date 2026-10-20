@@ -1,3 +1,5 @@
+[![DOI](https://zenodo.org/badge/1427064734.svg)](https://doi.org/10.5281/zenodo.23502844)
+
 # OpticStudio Agent Skills
 
 Agent-facing guidance, helper scripts, and examples for controlling Zemax OpticStudio from Python through the ZOS-API. The skill was developed against OpticStudio 24.1.
